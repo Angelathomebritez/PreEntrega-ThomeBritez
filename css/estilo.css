@@ -1,0 +1,469 @@
+/*
+*{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    color:rgb(248, 246, 246);
+    text-align:center;
+    font-size:20px;
+    margin:0px;
+    width:100%;
+    background-color: rgba(168, 17, 29, 0.918);
+}
+
+li{
+    list-style-type:none;
+    display: inline-block;  
+}
+nav a{
+    background-color:rgb(168, 123, 80);
+    text-decoration: none;
+    color: white;
+    border: 4px solid rgb(168, 123, 80);
+}
+footer{
+    margin-bottom: 0;
+    background-color: antiquewhite;
+    width: 100%;
+}
+.logo{
+    width: 130px;
+    top:-20px;
+    display:inline-block;
+    margin-left:60px;
+}
+nav{
+    margin-top:10px;
+    margin-left:400px;
+}
+header{
+    background-image: url(../img/logo.jpeg);
+    background-size: 80px;
+    background-repeat: no-repeat;
+    padding:25px;
+    background-color: rgb(223, 202, 176);
+    margin-bottom:0px;
+    width: 100%;
+}
+.fotoindex{
+    width:100%;
+
+}
+.info{
+    background-color: rgba(223, 202, 176);
+    font-size:30px;
+    color:rgb(168, 17, 29,0.918); 
+    padding:10px;   
+}
+.info li{
+    margin: 20px;
+} 
+
+.venta, .promocion{
+    margin:10px;
+    display: flex;
+    flex-direction: row; 
+    border-radius: 20px;
+    width: 100px;
+}
+
+div img{
+    width: 150px;
+    padding-bottom:10px;
+   
+}
+.vendido, .promo {
+    border-radius: 52;
+    border: 5px solid rgb(38, 38, 43);
+    background-color: rgb(10, 2, 2);
+    padding-bottom: 20px;
+    margin:20px;
+    font-size: 18px;
+    color: bisque;
+}
+
+.venta h2{
+    
+    font-size: 30px;
+    color: rgb(10, 10, 10);
+    margin-left:10px;
+    height: 50px;
+    
+    
+}
+.promocion h2{
+    font-size: 30px;
+    color: rgb(12, 12, 12);
+    margin-left:10px;
+    height: 50px; 
+}
+.icon{
+    width: 35px;
+}
+main{
+    text-align:center ;
+}
+
+.redes a{
+    border: none;
+}
+.nosotros h2{
+    background-color: rgb(168, 123, 80);
+    width: 300px;
+    color:bisque;
+    margin:5px;
+    font-size: 20px;
+}
+.nosotros p{
+    margin: 5px;
+}
+.dudas{
+    background-color: bisque;
+    margin:20px;
+}
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*
+- APLICANDO GRID CON LA MANERA SIMPLE, GRID-TEMPLATE-COLUMNS Y GRID-TEMPLATE-ROWS) PASO A PASO-
+--- PARA DESKTOP VIEWPORT---
+
+
+
+header img{
+width: 90px;
+}
+header{
+    width: 100%;
+    background-color: rgb(223, 202, 176);
+    background-color: rgb(223, 202, 176);
+    height: 90px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;  /*esto esta bien,sirve
+}
+.ul{
+    display: flex;
+    list-style-type: none;
+    position:relative;
+    z-index:50px;
+    font-size: 15px;   
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+li{
+    padding: 0;
+    margin-top: 12px;
+    margin-left: 10px;
+    background-color: rgb(236, 187, 130);
+    border: 5px solid rgb(209, 137, 78);
+    border-radius: 10px;
+}
+h1{
+    text-align: center;
+    background-color: brown;
+    width: 100%vh;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+}
+nav{
+    width: 100%;
+    height: 90px;
+}
+
+*/
+----------------------------
+/*--- GRID POR AREAS ---*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*declaro nombres de las etiquetas para la grilla por areas*/
+header img{
+width: 22%;
+height: 70%;
+margin-left: 40%;
+margin-top: 10px
+}
+h1{
+    font-size: 1px;
+}
+/*h1{
+    color:rgb(248, 246, 246);
+    text-align:center;
+    margin-top: -75px;
+    margin-left:3em;
+}*/
+header{
+    grid-area: header;
+    background-color: rgb(223, 202, 176);
+    height: 100px;
+}
+.masvendido{
+    grid-area: productos;
+}
+.ventaflex, .masvendido{
+   justify-content: space-around;
+   background-color:rgb(176, 179, 184);
+   color: rgb(10, 10, 10);
+   padding: 5px;
+   font-size: 20px;
+   /*display: flex;*/
+   /* flex-wrap: wrap;*/
+  
+}
+.ABORDE{
+    display: flex;
+    border: 10px solid rgb(255, 254, 253);
+    margin: 10px;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 95%;
+    font-size: 20px;
+}
+.ABORDE:hover, .sets:hover{
+    border-color: crimson;
+    box-shadow: 20px;
+
+}
+.masvendido img{
+  width: 100%;
+}   
+
+.promocion{
+    grid-area: ofertas;
+}
+nav{
+    grid-area: nav;
+    background-color: rgb(223, 202, 176); 
+}
+nav a{
+    text-decoration: none;
+    color: rgb(8, 8, 8);
+    font-size: 15px;
+    font-weight:bold;
+    border: 3px solid rgb(190, 179, 172);
+    background-color: rgb(236, 199, 152);
+} 
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    list-style-type: none;
+}
+footer{
+    grid-area: footer;
+    background-color: rgb(223, 202, 176);
+
+}
+.fotosindex{
+    grid-area: carrusel;
+}
+.subti{
+    grid-area: masvendido;
+    margin-top:50px;
+    margin-left: 30%;
+}
+.subti2{
+    grid-area:promos;
+    margin-top: 30px;
+    margin-left: 35%;
+}
+.subti h2{
+    font-size: 25px;
+}
+subti2 h2{
+    font-size: 20px;
+}
+
+.grilla{
+    display: grid;
+    grid-template-areas: 
+    "header  "
+    "nav    "
+    "carrusel"
+    "masvendido"
+    "productos "
+    "promos "
+    "ofertas"
+    "footer ";
+    grid-template-columns:1fr;
+    grid-template-rows: 2fr 1fr 0.5fr 2fr 0.5fr 1fr 1fr 1fr;
+    width: 100%;
+    height: 100vh;
+    gap: 5px;
+}
+.promocion img{
+width: 100%;
+}
+.subtitulo{
+    border:10px solid rgb(199, 148, 124);
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.grilla2{
+    display: grid;
+    grid-template-areas: 
+    "header header "
+    "nav    nav"
+    "nosotros nosotros "
+    "encontrarnos encontrarnos"
+    "footer footer";
+    grid-template-columns:1fr;
+    grid-template-rows:0.75fr 0.5fr 2fr 2fr;
+    width: 100%;
+    height: 100vh;
+}
+.nosotros{
+    grid-area: nosotros;
+}
+.encontrarnos{
+    grid-area: encontrarnos;
+}
+.grilla3{
+    display:grid;
+    grid-template-areas:
+    "header header "
+    "nav nav"
+    "productos productos"
+    "footer footer";
+    grid-template-columns: 1fr;
+    grid-template-rows:0.75fr 1fr 4fr  1fr;
+    width:100%;
+    height:100vh;
+    }
+.tienda-productos{
+    grid-area: productos;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+   
+}
+.tienda-productos img{
+width: 100%;
+height: 80%;
+}
+.sets{
+    border: 10px solid rgb(243, 204, 178);
+    display: flex;
+    flex-direction:column;
+    width:40%;
+    height: 30%;
+    margin: 5px;
+}
+.grilla4{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "pasos pasos"
+    "footer footer";
+}
+.grilla4 h1, .grilla5 h1{
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    margin-left: 15%;
+}
+.pasos{
+    grid-area: pasos
+}
+.grilla5{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "dudas dudas"
+    "footer footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.75fr 0.5fr 3fr 1fr;
+}
+.dudas{
+    grid-area:dudas
+}
+.icon{
+    width: 35px;
+}
+.ICON2{
+    width: 10%;
+
+}
+@media(min-width:550px){
+  .grilla{
+    display: grid;
+  }
+  header img{
+    width: 18%;
+    height:75%;
+    margin-left:4%;
+
+  }
+  h1{
+    font-size: 30px;
+    margin-left: 40%;
+    margin-top:-2em ;
+    color: aliceblue;
+  }
+  .ventaflex, .masvendido{
+    justify-content: space-around;
+    background-color:rgb(249, 251, 255);
+    color: rgb(10, 10, 10);
+
+ }
+ .ABORDE{
+    border: 10px solid rgb(236, 203, 172);
+    font-size: 20px;
+}
+.subti h2, .subti2 h2{
+    font-size: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: crimson;
+}
+}
+@media(min-width:768px){
+    .grilla{
+      display: grid;
+    }
+    header img{
+      width: 15%;
+      height:80%;
+      margin-left:2%;
+  
+    }
+    h1{
+      font-size: 30px;
+      margin-left: 40%;
+      margin-top:-2em ;
+      color: aliceblue;
+    }
+    .ventaflex, .masvendido{
+        background-color:rgb(188, 174, 214);
+        color: rgb(10, 10, 10);
+        font-size: 30px;
+        display: flex;
+        width: 100%;
+    }
+    .ABORDE{
+            font-size: 25px;
+        }
+    .sets{
+            border: 10px solid rgb(243, 204, 178);
+            font-size: 30px;
+               }
+ }
+
+
