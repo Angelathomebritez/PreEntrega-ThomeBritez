@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    grid-area: header;
+    background-color: rgb(223, 202, 176);
+    height: 100px;
+    img{
+        width: 22%;
+        height: 70%;
+        margin-left: 40%;
+        margin-top: 10px
+    }
+}
+
+nav{
+    grid-area: nav;
+    background-color: rgb(223, 202, 176); 
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 10px;
+        list-style-type: none;
+            a{
+                text-decoration: none;
+                color: rgb(8, 8, 8);
+                font-size: 15px;
+                font-weight:bold;
+                border: 3px solid rgb(190, 179, 172);
+                background-color: rgb(236, 199, 152);
+            } 
+        }
+    }  

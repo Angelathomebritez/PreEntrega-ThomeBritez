@@ -1,213 +1,7 @@
-/*
-*{
-    padding: 0;
-    margin: 0;
-}
+@import "generales";
+
 h1{
-    color:rgb(248, 246, 246);
-    text-align:center;
-    font-size:20px;
-    margin:0px;
-    width:100%;
-    background-color: rgba(168, 17, 29, 0.918);
-}
-
-li{
-    list-style-type:none;
-    display: inline-block;  
-}
-nav a{
-    background-color:rgb(168, 123, 80);
-    text-decoration: none;
-    color: white;
-    border: 4px solid rgb(168, 123, 80);
-}
-footer{
-    margin-bottom: 0;
-    background-color: antiquewhite;
-    width: 100%;
-}
-.logo{
-    width: 130px;
-    top:-20px;
-    display:inline-block;
-    margin-left:60px;
-}
-nav{
-    margin-top:10px;
-    margin-left:400px;
-}
-header{
-    background-image: url(../img/logo.jpeg);
-    background-size: 80px;
-    background-repeat: no-repeat;
-    padding:25px;
-    background-color: rgb(223, 202, 176);
-    margin-bottom:0px;
-    width: 100%;
-}
-.fotoindex{
-    width:100%;
-
-}
-.info{
-    background-color: rgba(223, 202, 176);
-    font-size:30px;
-    color:rgb(168, 17, 29,0.918); 
-    padding:10px;   
-}
-.info li{
-    margin: 20px;
-} 
-
-.venta, .promocion{
-    margin:10px;
-    display: flex;
-    flex-direction: row; 
-    border-radius: 20px;
-    width: 100px;
-}
-
-div img{
-    width: 150px;
-    padding-bottom:10px;
-   
-}
-.vendido, .promo {
-    border-radius: 52;
-    border: 5px solid rgb(38, 38, 43);
-    background-color: rgb(10, 2, 2);
-    padding-bottom: 20px;
-    margin:20px;
-    font-size: 18px;
-    color: bisque;
-}
-
-.venta h2{
-    
-    font-size: 30px;
-    color: rgb(10, 10, 10);
-    margin-left:10px;
-    height: 50px;
-    
-    
-}
-.promocion h2{
-    font-size: 30px;
-    color: rgb(12, 12, 12);
-    margin-left:10px;
-    height: 50px; 
-}
-.icon{
-    width: 35px;
-}
-main{
-    text-align:center ;
-}
-
-.redes a{
-    border: none;
-}
-.nosotros h2{
-    background-color: rgb(168, 123, 80);
-    width: 300px;
-    color:bisque;
-    margin:5px;
-    font-size: 20px;
-}
-.nosotros p{
-    margin: 5px;
-}
-.dudas{
-    background-color: bisque;
-    margin:20px;
-}
-*/
-
-*{
-    padding: 0;
-    margin: 0;
-}
-
-/*
-- APLICANDO GRID CON LA MANERA SIMPLE, GRID-TEMPLATE-COLUMNS Y GRID-TEMPLATE-ROWS) PASO A PASO-
---- PARA DESKTOP VIEWPORT---
-
-
-
-header img{
-width: 90px;
-}
-header{
-    width: 100%;
-    background-color: rgb(223, 202, 176);
-    background-color: rgb(223, 202, 176);
-    height: 90px;
-    display: grid;
-    grid-template-columns: 1fr 4fr;  /*esto esta bien,sirve
-}
-.ul{
-    display: flex;
-    list-style-type: none;
-    position:relative;
-    z-index:50px;
-    font-size: 15px;   
-    margin-top: 18px;
-    flex-wrap: wrap;
-}
-li{
-    padding: 0;
-    margin-top: 12px;
-    margin-left: 10px;
-    background-color: rgb(236, 187, 130);
-    border: 5px solid rgb(209, 137, 78);
-    border-radius: 10px;
-}
-h1{
-    text-align: center;
-    background-color: brown;
-    width: 100%vh;
-}
-nav a{
-    text-decoration: none;
-    color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0;
-}
-nav{
-    width: 100%;
-    height: 90px;
-}
-
-*/
-----------------------------
-/*--- GRID POR AREAS ---*/
-
-*{
-    padding: 0;
-    margin: 0;
-}
-
-/*declaro nombres de las etiquetas para la grilla por areas*/
-header img{
-width: 22%;
-height: 70%;
-margin-left: 40%;
-margin-top: 10px
-}
-h1{
-    font-size: 1px;
-}
-/*h1{
-    color:rgb(248, 246, 246);
-    text-align:center;
-    margin-top: -75px;
-    margin-left:3em;
-}*/
-header{
-    grid-area: header;
-    background-color: rgb(223, 202, 176);
-    height: 100px;
+    font-size: 0px;
 }
 .masvendido{
     grid-area: productos;
@@ -215,11 +9,9 @@ header{
 .ventaflex, .masvendido{
    justify-content: space-around;
    background-color:rgb(176, 179, 184);
-   color: rgb(10, 10, 10);
+   color: rgb(3, 3, 3);
    padding: 5px;
    font-size: 20px;
-   /*display: flex;*/
-   /* flex-wrap: wrap;*/
   
 }
 .ABORDE{
@@ -244,25 +36,7 @@ header{
 .promocion{
     grid-area: ofertas;
 }
-nav{
-    grid-area: nav;
-    background-color: rgb(223, 202, 176); 
-}
-nav a{
-    text-decoration: none;
-    color: rgb(8, 8, 8);
-    font-size: 15px;
-    font-weight:bold;
-    border: 3px solid rgb(190, 179, 172);
-    background-color: rgb(236, 199, 152);
-} 
-nav ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10px;
-    list-style-type: none;
-}
+
 footer{
     grid-area: footer;
     background-color: rgb(223, 202, 176);
@@ -284,7 +58,7 @@ footer{
 .subti h2{
     font-size: 25px;
 }
-subti2 h2{
+.subti2 h2{
     font-size: 20px;
 }
 
@@ -357,6 +131,7 @@ width: 100%;
 width: 100%;
 height: 80%;
 }
+/*
 .sets{
     border: 10px solid rgb(243, 204, 178);
     display: flex;
@@ -364,7 +139,25 @@ height: 80%;
     width:40%;
     height: 30%;
     margin: 5px;
+}*/
+.tienda-productos{
+    justify-content: space-around;
+   background-color:rgb(176, 179, 184);
+   color: rgb(3, 3, 3);
+   padding: 5px;
+   font-size: 20px;
 }
+.sets{
+    display: flex;
+    border: 10px solid rgb(255, 254, 253);
+    margin: 10px;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 95%;
+    font-size: 20px;
+}
+
 .grilla4{
     display: grid;
     grid-template-areas: 
@@ -402,6 +195,7 @@ height: 80%;
     width: 10%;
 
 }
+
 @media(min-width:550px){
   .grilla{
     display: grid;
@@ -465,5 +259,3 @@ height: 80%;
             font-size: 30px;
                }
  }
-
-

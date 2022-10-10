@@ -1,0 +1,288 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  grid-area: header;
+  background-color: rgb(223, 202, 176);
+  height: 100px;
+}
+header img {
+  width: 22%;
+  height: 70%;
+  margin-left: 40%;
+  margin-top: 10px;
+}
+
+nav {
+  grid-area: nav;
+  background-color: rgb(223, 202, 176);
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+  list-style-type: none;
+}
+nav ul a {
+  text-decoration: none;
+  color: rgb(8, 8, 8);
+  font-size: 15px;
+  font-weight: bold;
+  border: 3px solid rgb(190, 179, 172);
+  background-color: rgb(236, 199, 152);
+}
+
+h1 {
+  font-size: 0px;
+}
+
+.masvendido {
+  grid-area: productos;
+}
+
+.ventaflex, .masvendido {
+  justify-content: space-around;
+  background-color: rgb(176, 179, 184);
+  color: rgb(3, 3, 3);
+  padding: 5px;
+  font-size: 20px;
+}
+
+.ABORDE {
+  display: flex;
+  border: 10px solid rgb(255, 254, 253);
+  margin: 10px;
+  padding-bottom: 10px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 95%;
+  font-size: 20px;
+}
+
+.ABORDE:hover, .sets:hover {
+  border-color: crimson;
+  box-shadow: 20px;
+}
+
+.masvendido img {
+  width: 100%;
+}
+
+.promocion {
+  grid-area: ofertas;
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(223, 202, 176);
+}
+
+.fotosindex {
+  grid-area: carrusel;
+}
+
+.subti {
+  grid-area: masvendido;
+  margin-top: 50px;
+  margin-left: 30%;
+}
+
+.subti2 {
+  grid-area: promos;
+  margin-top: 30px;
+  margin-left: 35%;
+}
+
+.subti h2 {
+  font-size: 25px;
+}
+
+.subti2 h2 {
+  font-size: 20px;
+}
+
+.grilla {
+  display: grid;
+  grid-template-areas: "header  " "nav    " "carrusel" "masvendido" "productos " "promos " "ofertas" "footer ";
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr 0.5fr 2fr 0.5fr 1fr 1fr 1fr;
+  width: 100%;
+  height: 100vh;
+  gap: 5px;
+}
+
+.promocion img {
+  width: 100%;
+}
+
+.subtitulo {
+  border: 10px solid rgb(199, 148, 124);
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.grilla2 {
+  display: grid;
+  grid-template-areas: "header header " "nav    nav" "nosotros nosotros " "encontrarnos encontrarnos" "footer footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.75fr 0.5fr 2fr 2fr;
+  width: 100%;
+  height: 100vh;
+}
+
+.nosotros {
+  grid-area: nosotros;
+}
+
+.encontrarnos {
+  grid-area: encontrarnos;
+}
+
+.grilla3 {
+  display: grid;
+  grid-template-areas: "header header " "nav nav" "productos productos" "footer footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.75fr 1fr 4fr 1fr;
+  width: 100%;
+  height: 100vh;
+}
+
+.tienda-productos {
+  grid-area: productos;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+}
+
+.tienda-productos img {
+  width: 100%;
+  height: 80%;
+}
+
+/*
+.sets{
+    border: 10px solid rgb(243, 204, 178);
+    display: flex;
+    flex-direction:column;
+    width:40%;
+    height: 30%;
+    margin: 5px;
+}*/
+.tienda-productos {
+  justify-content: space-around;
+  background-color: rgb(176, 179, 184);
+  color: rgb(3, 3, 3);
+  padding: 5px;
+  font-size: 20px;
+}
+
+.sets {
+  display: flex;
+  border: 10px solid rgb(255, 254, 253);
+  margin: 10px;
+  padding-bottom: 10px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 95%;
+  font-size: 20px;
+}
+
+.grilla4 {
+  display: grid;
+  grid-template-areas: "header header" "nav nav" "pasos pasos" "footer footer";
+}
+
+.grilla4 h1, .grilla5 h1 {
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  margin-left: 15%;
+}
+
+.pasos {
+  grid-area: pasos;
+}
+
+.grilla5 {
+  display: grid;
+  grid-template-areas: "header header" "nav nav" "dudas dudas" "footer footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.75fr 0.5fr 3fr 1fr;
+}
+
+.dudas {
+  grid-area: dudas;
+}
+
+.icon {
+  width: 35px;
+}
+
+.ICON2 {
+  width: 10%;
+}
+
+@media (min-width: 550px) {
+  .grilla {
+    display: grid;
+  }
+  header img {
+    width: 18%;
+    height: 75%;
+    margin-left: 4%;
+  }
+  h1 {
+    font-size: 30px;
+    margin-left: 40%;
+    margin-top: -2em;
+    color: aliceblue;
+  }
+  .ventaflex, .masvendido {
+    justify-content: space-around;
+    background-color: rgb(249, 251, 255);
+    color: rgb(10, 10, 10);
+  }
+  .ABORDE {
+    border: 10px solid rgb(236, 203, 172);
+    font-size: 20px;
+  }
+  .subti h2, .subti2 h2 {
+    font-size: 35px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    color: crimson;
+  }
+}
+@media (min-width: 768px) {
+  .grilla {
+    display: grid;
+  }
+  header img {
+    width: 15%;
+    height: 80%;
+    margin-left: 2%;
+  }
+  h1 {
+    font-size: 30px;
+    margin-left: 40%;
+    margin-top: -2em;
+    color: aliceblue;
+  }
+  .ventaflex, .masvendido {
+    background-color: rgb(188, 174, 214);
+    color: rgb(10, 10, 10);
+    font-size: 30px;
+    display: flex;
+    width: 100%;
+  }
+  .ABORDE {
+    font-size: 25px;
+  }
+  .sets {
+    border: 10px solid rgb(243, 204, 178);
+    font-size: 30px;
+  }
+}/*# sourceMappingURL=style.css.map */
