@@ -6,6 +6,7 @@ header{
     grid-area: header;
     background-color: rgb(223, 202, 176);
     height: 100px;
+    width: 100%;
     img{
         width: 22%;
         height: 70%;
@@ -33,3 +34,11 @@ nav{
             } 
         }
     }  
+input{
+        width: 4em;
+        background-color: rgb(162, 142, 252);
+        color: aliceblue;
+        border: 2px solid aliceblue;
+        display: flex;
+        justify-content:center ;
+    }

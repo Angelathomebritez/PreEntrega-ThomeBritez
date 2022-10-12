@@ -7,6 +7,7 @@ header {
   grid-area: header;
   background-color: rgb(223, 202, 176);
   height: 100px;
+  width: 100%;
 }
 header img {
   width: 22%;
@@ -35,6 +36,15 @@ nav ul a {
   background-color: rgb(236, 199, 152);
 }
 
+input {
+  width: 4em;
+  background-color: rgb(162, 142, 252);
+  color: aliceblue;
+  border: 2px solid aliceblue;
+  display: flex;
+  justify-content: center;
+}
+
 h1 {
   font-size: 0px;
 }
@@ -51,11 +61,10 @@ h1 {
   font-size: 20px;
 }
 
-.ABORDE {
+.ABORDE, .sets {
   display: flex;
   border: 10px solid rgb(255, 254, 253);
   margin: 10px;
-  padding-bottom: 10px;
   flex-wrap: wrap;
   flex-direction: column;
   width: 95%;
@@ -64,7 +73,6 @@ h1 {
 
 .ABORDE:hover, .sets:hover {
   border-color: crimson;
-  box-shadow: 20px;
 }
 
 .masvendido img {
@@ -87,21 +95,21 @@ footer {
 .subti {
   grid-area: masvendido;
   margin-top: 50px;
-  margin-left: 30%;
+}
+.subti h2 {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
 }
 
 .subti2 {
   grid-area: promos;
   margin-top: 30px;
-  margin-left: 35%;
 }
-
-.subti h2 {
-  font-size: 25px;
-}
-
 .subti2 h2 {
   font-size: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .grilla {
@@ -124,10 +132,14 @@ footer {
   display: flex;
   flex-direction: column;
 }
+.subtitulo p {
+  display: block;
+  margin: 10px;
+}
 
 .grilla2 {
   display: grid;
-  grid-template-areas: "header header " "nav    nav" "nosotros nosotros " "encontrarnos encontrarnos" "footer footer";
+  grid-template-areas: "header  " " nav" "nosotros" "encontrarnos " "footer";
   grid-template-columns: 1fr;
   grid-template-rows: 0.75fr 0.5fr 2fr 2fr;
   width: 100%;
@@ -144,63 +156,29 @@ footer {
 
 .grilla3 {
   display: grid;
-  grid-template-areas: "header header " "nav nav" "productos productos" "footer footer";
+  grid-template-areas: "header" "nav" "productos " "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: 0.75fr 1fr 4fr 1fr;
+  grid-template-rows: 0.75fr 1fr 1fr 1fr;
   width: 100%;
   height: 100vh;
+  gap: 5px;
 }
 
 .tienda-productos {
   grid-area: productos;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 5px;
-}
-
-.tienda-productos img {
-  width: 100%;
-  height: 80%;
-}
-
-/*
-.sets{
-    border: 10px solid rgb(243, 204, 178);
-    display: flex;
-    flex-direction:column;
-    width:40%;
-    height: 30%;
-    margin: 5px;
-}*/
-.tienda-productos {
-  justify-content: space-around;
   background-color: rgb(176, 179, 184);
   color: rgb(3, 3, 3);
   padding: 5px;
   font-size: 20px;
+  justify-content: center;
 }
-
-.sets {
-  display: flex;
-  border: 10px solid rgb(255, 254, 253);
-  margin: 10px;
-  padding-bottom: 10px;
-  flex-wrap: wrap;
-  flex-direction: column;
-  width: 95%;
-  font-size: 20px;
+.tienda-productos img {
+  width: 100%;
 }
 
 .grilla4 {
   display: grid;
   grid-template-areas: "header header" "nav nav" "pasos pasos" "footer footer";
-}
-
-.grilla4 h1, .grilla5 h1 {
-  color: rgb(255, 255, 255);
-  display: flex;
-  justify-content: center;
-  margin-left: 15%;
 }
 
 .pasos {
@@ -209,7 +187,7 @@ footer {
 
 .grilla5 {
   display: grid;
-  grid-template-areas: "header header" "nav nav" "dudas dudas" "footer footer";
+  grid-template-areas: "header " "nav " "dudas " "footer ";
   grid-template-columns: 1fr;
   grid-template-rows: 0.75fr 0.5fr 3fr 1fr;
 }
@@ -223,11 +201,11 @@ footer {
 }
 
 .ICON2 {
-  width: 10%;
+  width: 5%;
 }
 
 @media (min-width: 550px) {
-  .grilla {
+  .grilla, .grilla3 {
     display: grid;
   }
   header img {
@@ -236,17 +214,18 @@ footer {
     margin-left: 4%;
   }
   h1 {
+    display: flex;
+    justify-content: center;
     font-size: 30px;
-    margin-left: 40%;
     margin-top: -2em;
     color: aliceblue;
   }
-  .ventaflex, .masvendido {
+  .ventaflex, .masvendido, .tienda-productos {
     justify-content: space-around;
     background-color: rgb(249, 251, 255);
     color: rgb(10, 10, 10);
   }
-  .ABORDE {
+  .ABORDE, .sets {
     border: 10px solid rgb(236, 203, 172);
     font-size: 20px;
   }
@@ -255,21 +234,18 @@ footer {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     color: crimson;
   }
+  input {
+    border-radius: 20px;
+    padding: 5px;
+  }
 }
 @media (min-width: 768px) {
-  .grilla {
+  .grilla, .grilla3 {
     display: grid;
   }
   header img {
     width: 15%;
     height: 80%;
-    margin-left: 2%;
-  }
-  h1 {
-    font-size: 30px;
-    margin-left: 40%;
-    margin-top: -2em;
-    color: aliceblue;
   }
   .ventaflex, .masvendido {
     background-color: rgb(188, 174, 214);
@@ -278,11 +254,30 @@ footer {
     display: flex;
     width: 100%;
   }
-  .ABORDE {
-    font-size: 25px;
+  .grilla3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.75fr 0.5fr 1fr 1fr;
+    width: 100%;
+    height: 100vh;
+    gap: 5px;
+  }
+  .tienda-productos {
+    width: 100%;
+    background-color: rgb(188, 174, 214);
+    color: rgb(10, 10, 10);
+    display: flex;
+    flex-wrap: wrap;
   }
   .sets {
-    border: 10px solid rgb(243, 204, 178);
-    font-size: 30px;
+    width: 45%;
+  }
+  .ABORDE, .sets, .subtitulo {
+    border: 10px solid rgb(195, 245, 162);
+  }
+  input {
+    background-color: black;
+  }
+  .subtitulo h2 {
+    color: blueviolet;
   }
 }/*# sourceMappingURL=style.css.map */
