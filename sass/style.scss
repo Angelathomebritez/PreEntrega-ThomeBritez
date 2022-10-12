@@ -118,19 +118,17 @@ width: 100%;
     width:100%;
     height:100vh;
     gap: 5px;
-    }
-.tienda-productos{
-        grid-area: productos;
-        background-color:rgb(176, 179, 184);
-        color: rgb(3, 3, 3);
-        padding: 5px;
-        font-size: 20px;
-        justify-content: center;
-        img{
-            width: 100%;
-            
-         }
 }
+.tienda-productos{
+    grid-area: productos;
+    background-color:rgb(176, 179, 184);
+    color: rgb(3, 3, 3);
+    padding: 5px;
+    font-size: 20px;
+    justify-content: center;
+    img{
+        width: 100%;        
+    }
 .sets{
     @extend .ABORDE;
 }
@@ -166,7 +164,7 @@ width: 100%;
 }
 
 @media(min-width:550px){
-    .grilla , .grilla3{
+    .grilla, .grilla3{
       display: grid;
     }
     header img{
@@ -186,54 +184,54 @@ width: 100%;
       background-color:rgb(249, 251, 255);
       color: rgb(10, 10, 10);
   
-   }
+    }
    .ABORDE, .sets{
       border: 10px solid rgb(236, 203, 172);
       font-size: 20px;
-  }
+    }
   .subti h2, .subti2 h2{
       font-size: 35px;
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       color: crimson;
-  }
+    }
   input{
      border-radius: 20px;
      padding: 5px;
-  }
-  }
+    }
+}
   
-  @media(min-width:768px){
-      .grilla, .grilla3{
+@media(min-width:768px){
+    .grilla, .grilla3{
         display: grid;
-      }
-      header img{
+    }
+    header img{
         width: 15%;
         height:80%;
-      }
-      .ventaflex, .masvendido{
+    }
+    .ventaflex, .masvendido{
           background-color:rgb(188, 174, 214);
           color: rgb(10, 10, 10);
           font-size: 30px;
           display: flex;
           width: 100%; 
-      }       
-      .grilla3{
+    }       
+    .grilla3{
           grid-template-columns: 1fr;
           grid-template-rows:0.75fr 0.5fr 1fr  1fr;
           width:100%;
           height:100vh;
           gap: 5px;
-      }
-      .tienda-productos{
+    }
+    .tienda-productos{
           width:100%;
           background-color:rgb(188, 174, 214);
           color: rgb(10, 10, 10);
           display: flex;
           flex-wrap: wrap;
-      }
-      .sets{
+    }
+    .sets{
           width: 45%;
-      }
+    }
     .ABORDE, .sets, .subtitulo{
         border: 10px solid rgb(195, 245, 162);
     }
@@ -244,6 +242,6 @@ width: 100%;
     .subtitulo h2{
         color:blueviolet;
     }
-    }
+}
 
     
