@@ -96,18 +96,6 @@ h1 {
     width: 100%;
 }
 
-.subtitulo {
-    border: 10px solid rgb(199, 148, 124);
-    padding-bottom: 0px;
-    display: flex;
-    flex-direction: column;
-
-    p {
-        display: block;
-        margin: 10px;
-    }
-}
-
 .grilla2 {
     display: grid;
     grid-template-areas:
@@ -164,7 +152,7 @@ h1 {
         "pasos "
         "footer ";
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 0.5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     width: 100%;
     height: 100vh;
 }
@@ -181,13 +169,25 @@ h1 {
         "dudas"
         "footer";
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 0.5fr 1.5fr 1fr;
+    grid-template-rows: 1fr 0.75fr 4fr 2fr;
     width: 100%;
+    height: 100vh;
 }
 
+.subtitulo {
+    border: 10px solid rgb(199, 148, 124);
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 5px;
+    p {
+        display: block;
+        margin: 10px;
+    }
+}
 .dudas {
     grid-area: dudas;
-    height: 300px;
 }
 
 .icon {
